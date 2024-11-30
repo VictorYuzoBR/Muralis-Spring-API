@@ -37,11 +37,7 @@ public class ClienteController {
     public ResponseEntity<String> pesquisa(@PathVariable Long id) {
 
         try {
-            ClienteDTO cli = clienteService.pesquisa(id);
-            String res = "Nome do cliente: " + cli.getNome() + "\nData do cadastro: " + cli.getDatacadastro() +
-                    "\nInformações de contato:  \nTipo: " + cli.getTipo() + "\n" + cli.getTexto();
-
-            return ResponseEntity.ok(res);
+            return ResponseEntity.ok(clienteService.pesquisa(id));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }

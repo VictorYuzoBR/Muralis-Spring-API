@@ -1,11 +1,9 @@
 package com.muralis.api_cliente.Model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
 
-import java.util.Date;
+import lombok.Data;
+
 
 @Entity
 @Data

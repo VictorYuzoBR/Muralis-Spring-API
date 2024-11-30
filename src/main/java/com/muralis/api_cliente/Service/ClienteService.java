@@ -32,13 +32,16 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public ClienteDTO pesquisa(Long id) {
+    public String pesquisa(Long id) {
 
         try {
             ClienteModel cliente = clienteRepository.findById(id).get();
-            return dtoMapper.convert(cliente);
+            ClienteDTO cli = dtoMapper.convert(cliente);
+            String res = "Nome do cliente: " + cli.getNome() + "\nData do cadastro: " + cli.getDatacadastro() +
+                    "\nInformações de contato:  \nTipo: " + cli.getTipo() + "\n" + cli.getTexto();
+            return res;
         } catch (Exception e) {
-            return null;
+            return e.getMessage();
         }
 
     }
