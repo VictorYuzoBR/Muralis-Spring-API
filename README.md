@@ -8,7 +8,7 @@ Projeto realizado utilizando java spring boot com intenção de criar uma API-Re
 
 * Spring web: para criação de projetos web
 * Spring Boot Dev Tools: para melhorias no processo de desenvolvimento
-* Lombok: Para diminuição de códigos padrões e uma codigicação mais limpa
+* Lombok: Para diminuição de códigos padrões e uma codificação mais limpa
 * H2 Database: Banco em memória para praticidade nos testes.
 * Spring Data JPA: Para interações com o banco de dados de forma facilitada
 
